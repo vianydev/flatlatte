@@ -221,10 +221,16 @@ h1 {
 
 .footer a {
   color: var(--default-color) !important;
+  border-bottom: 2px solid transparent;
+  transition: 0.3s all ease-in-out;
+  border-radius: 2px;
 }
 
 .footer a:hover {
   color: var(--accent-color);
+  border-bottom: 2px solid var(--accent-color);
+  border-radius: 2px;
+  padding: 0 10px;
 }
 
 .footer .copyright {
@@ -237,124 +243,6 @@ h1 {
 .footer .copyright p,
 .footer .copyright .credits {
   margin: 2px 0;
-}
-
-.footer .btn-learn-more {
-  background-color: var(--accent-color);
-  border-radius: 30px;
-  padding: 8px 30px;
-  border: 2px solid transparent;
-  transition: 0.3s all ease-in-out;
-  font-size: 14px;
-  color: var(--contrast-color) !important;
-}
-
-.footer .btn-learn-more:hover {
-  border-color: var(--accent-color);
-  background-color: transparent;
-  color: var(--accent-color) !important;
-}
-
-.footer .widget .widget-heading {
-  font-size: 15px;
-  color: var(--heading-color);
-  margin-bottom: 20px;
-}
-
-.footer .widget ul li {
-  margin-bottom: 10px;
-  line-height: 1.5;
-}
-
-.footer .widget ul li a {
-  color: color-mix(in srgb, var(--heading-color), transparent 50%);
-}
-
-.footer .widget ul li a:hover {
-  text-decoration: none;
-  color: var(--heading-color);
-}
-
-.footer .widget .footer-blog-entry .date {
-  color: color-mix(in srgb, var(--default-color), transparent 50%);
-  font-size: 12px;
-}
-
-.footer .social-icons li {
-  display: inline-block;
-  font-size: 1.8rem;
-}
-
-.footer .social-icons li a {
-  display: inline-block;
-  width: 40px;
-  height: 40px;
-  position: relative;
-  /* border-radius: 50%; */
-  /* background: color-mix(in srgb, var(--default-color), transparent 90%); */
-}
-
-.footer .social-icons li a span {
-  color: color-mix(in srgb, var(--heading-color), transparent 0%);
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  transition: 0.3s all ease-in-out;
-}
-
-.footer .social-icons li a:hover {
-  background: var(--accent-color);
-}
-
-.footer .social-icons li a:hover span {
-  color: var(--contrast-color);
-}
-
-.footer .social-icons li:first-child a {
-  padding-left: 0;
-}
-
-.footer .footer-subscribe form {
-  position: relative;
-}
-
-.footer .footer-subscribe .form-control {
-  font-size: 14px;
-  height: 42px;
-  border: 2px solid color-mix(in srgb, var(--default-color), transparent 40%);
-  background: none;
-  color: var(--heading-color);
-  padding-right: 40px;
-}
-
-.footer .footer-subscribe .form-control:focus {
-  border-color: color-mix(in srgb, var(--default-color), transparent 10%);
-  box-shadow: none;
-}
-
-.footer .footer-subscribe .form-control::placeholder {
-  color: color-mix(in srgb, var(--heading-color), transparent 60%);
-}
-
-.footer .footer-subscribe .btn-link {
-  padding: 0;
-  margin: 0;
-  font-size: 1.5rem;
-  background-color: none;
-  border-color: none;
-  position: absolute;
-  line-height: 0;
-  color: color-mix(in srgb, var(--heading-color), transparent 20%);
-  top: 20px;
-  right: 10px;
-  transform: translateY(-50%) rotate(0deg);
-}
-
-.footer .footer-subscribe .btn-link:hover,
-.footer .footer-subscribe .btn-link:focus,
-.footer .footer-subscribe .btn-link:active {
-  text-decoration: none;
 }
 
 /*--------------------------------------------------------------
@@ -540,10 +428,6 @@ section,
 /*--------------------------------------------------------------
 # About Section
 --------------------------------------------------------------*/
-.about {
-  /* margin: 4rem 0 5rem 0; */
-}
-
 .about h1 {
   color: var(--heading-color);
   /* font-size: 30px; */
@@ -557,96 +441,16 @@ section,
 }
 
 .about .imagen-about {
-  background-image: url("./../img/img_v_3.jpg");
-  background-size: cover;
-}
-
-.about .swiper-pagination {
-  position: absolute;
-  bottom: 30px;
-}
-
-.about .swiper-pagination .swiper-pagination-bullet {
-  margin: 0 5px;
-  background: #ffffff;
-  opacity: 0.3;
-}
-
-.about .swiper-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active {
-  background: var(--accent-color);
-  opacity: 1;
-}
-
-.about .section-subtitle {
-  font-size: 15px;
-  margin-bottom: 10px;
-  display: block;
-  color: var(--default-color);
-}
-
-/*--------------------------------------------------------------
-# About 2 Section
---------------------------------------------------------------*/
-.about-2 .content {
-  background-color: var(--surface-color);
-  padding-top: 50px;
-  padding-bottom: 50px;
-}
-
-.about-2 .content-subtitle {
-  font-size: 15px;
-  margin-bottom: 10px;
-  display: block;
-  color: var(--default-color);
-}
-
-.about-2 .content-title {
-  color: var(--heading-color);
-  font-size: 22px;
-  margin-bottom: 30px;
-}
-
-.about-2 p {
-  line-height: 1.7;
-  color: var(--default-color);
-}
-
-.about-2 .lead {
-  line-height: 1.6;
-  font-size: 18px;
-  font-weight: normal;
-  color: var(--default-color);
-}
-
-/*--------------------------------------------------------------
-# About Socio Section
---------------------------------------------------------------*/
-.about-socio {
-  height: 80vh;
-}
-
-.about-socio h1 {
-  color: var(--heading-color);
-  /* font-size: 30px; */
-  /* font-weight: 600; */
-  line-height: .95;
-}
-
-.about-socio p {
-  line-height: 1.7;
-  color: var(--default-color);
-}
-
-.about-socio .imagen-about-socio {
   background-image: url("../img/img_v_3.jpg");
   background-size: cover;
 }
 
-.about-socio .section-subtitle {
-  font-size: 15px;
-  margin-bottom: 10px;
-  display: block;
-  color: var(--default-color);
+@media (max-width: 991px) {
+  .about .imagen-about {
+    height: 400px;
+    background-size: cover;
+    background-position: center 60%;
+  }
 }
 
 /*--------------------------------------------------------------
@@ -670,11 +474,11 @@ section,
 
 @media (max-width: 991px) {
   .whyUs .imagen-whyUs {
-    height: 200px;
+    height: 400px;
+    background-size: cover;
+    background-position: center 60%;
   }
 }
-
-
 
 /*--------------------------------------------------------------
 # Services Section
@@ -776,143 +580,6 @@ section,
   padding: 150px 0 0 0;
 }
 
-
-/*--------------------------------------------------------------
-# Stats Section
---------------------------------------------------------------*/
-.stats {
-  padding-top: 60px;
-}
-
-.stats .content-subtitle {
-  font-size: 15px;
-  margin-bottom: 10px;
-  display: block;
-  color: var(--default-color);
-}
-
-.stats .lead {
-  line-height: 1.6;
-  font-size: 18px;
-  font-weight: normal;
-  color: var(--default-color);
-}
-
-.stats .content-title {
-  color: var(--heading-color);
-  font-size: 22px;
-  margin-bottom: 30px;
-}
-
-.stats p {
-  line-height: 1.7;
-  color: var(--default-color);
-}
-
-
-.stats .count-numbers .number {
-  font-size: 1.8rem;
-  color: var(--heading-color);
-  position: relative;
-  display: block;
-  padding-bottom: 7px;
-  margin-bottom: 10px;
-}
-
-.stats .count-numbers .number:after {
-  content: "";
-  left: 0;
-  bottom: 0;
-  position: absolute;
-  width: 20px;
-  height: 2px;
-  background: var(--accent-color);
-}
-
-/*--------------------------------------------------------------
-# Blog Posts Section
---------------------------------------------------------------*/
-.blog-posts .title-wrap {
-  padding-bottom: 30px;
-}
-
-.blog-posts .content-subtitle {
-  font-size: 15px;
-  margin-bottom: 10px;
-  display: block;
-  color: var(--default-color);
-}
-
-.blog-posts .content-title {
-  color: var(--heading-color);
-  font-size: 22px;
-  margin-bottom: 30px;
-}
-
-.blog-posts .post-entry .thumb {
-  margin-bottom: 20px;
-}
-
-.blog-posts .post-entry .thumb img {
-  transition: 0.3s all ease;
-}
-
-.blog-posts .post-entry .thumb:hover img {
-  opacity: 0.8;
-}
-
-.blog-posts .post-entry .meta {
-  font-size: 12px;
-  margin-bottom: 20px;
-}
-
-.blog-posts .post-entry .meta .cat {
-  text-transform: uppercase;
-  font-weight: normal;
-  color: var(--heading-color);
-}
-
-.blog-posts .post-entry .meta .date {
-  color: color-mix(in srgb, var(--default-color), transparent 25%);
-}
-
-.blog-posts .post-entry .post-content {
-  padding-left: 30px;
-  padding-right: 30px;
-}
-
-.blog-posts .post-entry .post-content h3 {
-  font-size: 18px;
-  line-height: 1.2;
-}
-
-.blog-posts .post-entry .post-content h3 a {
-  color: var(--heading-color);
-}
-
-.blog-posts .post-entry .post-content h3 a:hover {
-  color: var(--accent-color);
-}
-
-.blog-posts .author .pic {
-  flex: 0 0 50px;
-  margin-right: 20px;
-}
-
-.blog-posts .author .author-name {
-  line-height: 1.3;
-}
-
-.blog-posts .author .author-name strong {
-  color: var(--heading-color);
-  font-weight: normal;
-}
-
-.blog-posts .author .author-name span {
-  font-size: 14px;
-  color: color-mix(in srgb, var(--default-color), transparent 25%);
-}
-
 /*--------------------------------------------------------------
 # Tabs Section
 --------------------------------------------------------------*/
@@ -931,8 +598,6 @@ section,
 .tabs .service-item.link:hover {
   background: color-mix(in srgb, var(--default-color), transparent 96%);
 }
-
-
 
 
 /*--------------------------------------------------------------
@@ -1125,6 +790,7 @@ section,
 .portfolio .portfolio-item .portfolio-img .portfolio-bw-color:hover {
   filter: grayscale(0);
   transition: all 0.3s ease-in-out;
+  transform: scale(1.01);
 }
 
 .portfolio-img:before {
@@ -1136,11 +802,12 @@ section,
   top: 50px;
   left: 90%;
   z-index: 5;
-  font-size: 1.3rem;
 }
+
 .portfolio-img:hover:before {
-  /* color: var(--accent-color); */
-  color: red;
+  color: var(--accent-color);
+  font-size: 1.1rem;
+  transition: all 0.3s ease-in-out;
 }
 
 .portfolio .example-website {
