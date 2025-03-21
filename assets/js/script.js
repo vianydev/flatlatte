@@ -1,5 +1,44 @@
 (function() {
   "use strict";
+
+   /**
+   * Manejo del envío del formulario
+   */
+   const contactForm = document.getElementById("contact-form");
+   if (contactForm) {
+     contactForm.addEventListener("submit", function (event) {
+       event.preventDefault(); // Evita que el formulario se envíe de la manera tradicional
+ 
+       const form = event.target;
+       const formData = new FormData(form);
+ 
+       fetch(form.action, {
+         method: "POST",
+         body: formData,
+         headers: {
+           Accept: "application/json",
+         },
+       })
+         .then((response) => {
+           if (response.ok) {
+              // Redirigir a una página de "mensaje enviado"
+             window.location.href = "contact-enviado.html";
+            //  mensajeEnviado.classList.remove("hidden");
+            //  form.reset(); // Limpia el formulario
+           } else {
+             alert(
+               "Hubo un problema al enviar el formulario. Por favor, inténtalo de nuevo."
+             );
+           }
+         })
+         .catch((error) => {
+           alert(
+             "Hubo un problema al enviar el formulario. Por favor, inténtalo de nuevo."
+           );
+         });
+     });
+   }
+  
   /**
    * Apply .scrolled class to the body as the page is scrolled down
    */
